@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>🔥 MENU FREE FIRE 🔥</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      color: #00ff99;
+      background: url('https://i.imgur.com/YQmYzQb.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .menu-container {
+      background: rgba(0, 0, 0, 0.7);
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00ff99;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff5500;
+    }
+
+    .menu-item {
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-item label {
+      flex: 1;
+    }
+
+    input[type="checkbox"], input[type="range"] {
+      transform: scale(1.2);
+    }
+
+    .range-value {
+      margin-left: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #ff5500;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #ff7700;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <h1>🔥 MENU FF 🔥</h1>
+
+    <div class="menu-item">
+      <label for="aimlock">🎯 Aimlock</label>
+      <input type="checkbox" id="aimlock">
+    </div>
+
+    <div class="menu-item">
+      <label for="lockCo">🎯 Lock tâm ở cổ</label>
+      <input type="checkbox" id="lockCo">
+    </div>
+
+    <div class="menu-item">
+      <label for="nheTam">💨 Nhẹ tâm</label>
+      <input type="checkbox" id="nheTam">
+    </div>
+
+    <div class="menu-item">
+      <label for="nhayTam">🎚️ Nhạy tâm</label>
+      <input type="range" id="nhayTam" min="0" max="3000" value="1500" oninput="updateNhay(this.value)">
+      <span class="range-value" id="nhayValue">1500</span>
+    </div>
+
+    <div class="menu-item">
+      <label for="fixRung">🛠️ Fix rung</label>
+      <input type="range" id="fixRung" min="0" max="2000" value="1000" oninput="updateFix(this.value)">
+      <span class="range-value" id="fixValue">1000</span>
+    </div>
+
+    <div class="menu-item">
+      <label for="buffMan">📱 Buff màn</label>
+      <input type="checkbox" id="buffMan">
+    </div>
+
+    <div class="menu-item">
+      <label for="fixLag">🚀 Fix lag</label>
+      <input type="checkbox" id="fixLag">
+    </div>
+
+    <button onclick="hoanTat()">✅ Đã Hoàn Tất</button>
+  </div>
+
+  <script>
+    function updateNhay(val) {
+      document.getElementById("nhayValue").innerText = val;
+    }
+
+    function updateFix(val) {
+      document.getElementById("fixValue").innerText = val;
+    }
+
+    function hoanTat() {
+      alert("🟢 Cấu hình đã được áp dụng thành công!");
+    }
+  </script>
+</body>
+</html>
